@@ -1,0 +1,38 @@
+<div class="flex justify-center items-center h-screen">
+    <form
+        class="flex flex-col items-center justify-center gap-5 bg-[#EBEBEB] p-6 rounded-2xl"
+        method="post"
+    >
+    <img  src="enset-seeklogo.png" width="200px" height="200px"/>
+    <input
+        class="p-3 border-1 border-b-amber-800 rounded-2xl"
+        type="text"
+        name="login"
+        id="login"
+        placeholder="Login"
+        
+    />
+    <input *ngIf="isLoginMode"
+        class="p-3 border-1 border-b-amber-800 rounded-2xl"
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Name"
+    />
+        <input
+          class="p-3 border-1 border-b-amber-800 rounded-2xl"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"    
+        />
+        <button
+          type="submit"
+          class="bg-[#3f51b5] w-48 h-16 text-white rounded-3xl"
+          (click)="toggleMode($event)"
+        >  
+        {{ isLoginMode ? 'Sign in' : 'Sign Up' }}
+        </button>
+        <button type="button" class="relative text-blue-500 after:block after:h-0.5 after:w-0 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full" (click)="toggleMode($event)"> {{ isLoginMode ? 'Create an account' : 'Already have an account? Login' }}</button>
+      </form>
+</div>
