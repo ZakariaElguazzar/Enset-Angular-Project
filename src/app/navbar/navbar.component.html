@@ -1,0 +1,11 @@
+<nav class="  z-100 bg-white shadow-md p-4 flex justify-between items-center">
+    <div class="flex items-center">
+        <button [ngClass]="{ 'rotate-90': isOpen }" class="text-gray-700 text-2xl mr-4" (click)="toggleSidebar()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <img src="enset-seeklogo.png" alt="EnsetLogo" class="h-10"/>
+    </div>
+    <div class="flex items-center">
+        <button (click)="logout()" class="text-blue-500">Logout</button>
+    </div>
+</nav>

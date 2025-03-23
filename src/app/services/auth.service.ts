@@ -10,13 +10,20 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  // 🛠️ FIXED: Properly query for user authentication
+  // ✅ Login method
   login(credentials: { login: string; password: string }): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}?login=${credentials.login}&password=${credentials.password}`);
   }
 
-  // 🛠️ FIXED: Correct request body for registration
+  // ✅ Register method
   register(user: { name: string; login: string; password: string }): Observable<any> {
     return this.http.post<any>(this.apiUrl, user);
   }
+
+  // ✅ Logout method
+  logout(): void {
+    localStorage.removeItem('user'); // Remove stored user data
+    sessionStorage.clear(); // Clear session data
+  }
 }
+

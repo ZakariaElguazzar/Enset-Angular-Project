@@ -1,0 +1,21 @@
+<aside 
+  class=" -z-50 h-screen fixed left-0 top-0 w-64 bg-white shadow-lg transform 
+        transition-transform duration-300"
+  [ngClass]="{ 'translate-x-0': isOpen, '-translate-x-full': !isOpen }"
+>
+  <div class="p-4 border-b flex justify-between items-center">
+    <h1 class="text-xl font-bold">Menu</h1>
+  </div>
+
+  <ul class="p-4">
+    <li class="p-2 flex items-center hover:bg-gray-200 cursor-pointer">
+      <mat-icon class="mr-2">home</mat-icon> Dashboard
+    </li>
+    <li class="p-2 flex items-center hover:bg-gray-200 cursor-pointer">
+      <mat-icon class="mr-2">shopping_cart</mat-icon> Products
+    </li>
+    <li class="p-2 flex items-center hover:bg-gray-200 cursor-pointer">
+      <mat-icon class="mr-2">cloud_upload</mat-icon> Upload File
+    </li>
+  </ul>
+</aside>

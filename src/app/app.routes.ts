@@ -5,5 +5,5 @@ import { LoginFormComponent } from './login-signup/login-signup.component'; // �
 export const routes: Routes = [ 
   {path:'',redirectTo:'login',pathMatch:'full'},
   {path:'dashboard', component: DashboardComponent,title:"Dashboard"},
-  {path:'login',component:DashboardComponent,title:"Login"} // ✅ Define dashboard route
+  {path:'login',component:LoginFormComponent,title:"Login"} // ✅ Define dashboard route
 ];
